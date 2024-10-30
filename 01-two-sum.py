@@ -19,6 +19,7 @@ class Solution(object):
             
             # Otherwise, store the current number with its index in the dictionary
             num_to_index[num] = i
+            print(num_to_index)
 
 # Example usage:
 nums = [2, 1, 11, 15]
