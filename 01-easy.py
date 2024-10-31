@@ -23,6 +23,6 @@ class Solution(object):
 
 # Example usage:
 nums = [2, 1, 11, 15]
-target = 12
+target = 25
 solution = Solution()
 print(solution.twoSum(nums, target)) # Output: [
