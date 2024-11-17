@@ -5,32 +5,21 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        if s == "":
-            return True
         result = ""
-        index = ""
+        index_i = ""
+        index_t = ""
         for i in s:
             if i in t:
-                index += str(t.find(i))
-                if int(index[-1]) < t.find(i):
-                    return False
-                print(int(index[-1]))
-                # print(index)
+                index_i += str(t.find(i))
+                index_t += str(i.find(t))
                 result += i
-                # print(result)
-        
-        # for j, value in enumerate(index):
-        #     try:
-        #         print(int(index[j + 1]) > int(value))
-        #     except:
-        #         print('xato')
-        print(index)
-        if result == s:
+        right_answer = "".join(sorted(index_i))
+        if result == s and right_answer == index_i:
             return True
         return False
         
 solution = Solution()
-result = solution.isSubsequence("word", "wbndoarp")
+result = solution.isSubsequence("", "lettt")
 print(result)
 
 
