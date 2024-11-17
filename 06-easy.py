@@ -7,17 +7,30 @@ class Solution(object):
         """
         if s == "":
             return True
-        counter = 0
+        result = ""
+        index = ""
         for i in s:
-            boolen = i in t
-            if boolen:
-                counter += 1
-                if counter == len(s):
-                    return True
+            if i in t:
+                index += str(t.find(i))
+                if int(index[-1]) < t.find(i):
+                    return False
+                print(int(index[-1]))
+                # print(index)
+                result += i
+                # print(result)
+        
+        # for j, value in enumerate(index):
+        #     try:
+        #         print(int(index[j + 1]) > int(value))
+        #     except:
+        #         print('xato')
+        print(index)
+        if result == s:
+            return True
         return False
         
 solution = Solution()
-result = solution.isSubsequence("", "awkmokmrkd")
+result = solution.isSubsequence("word", "wbndoarp")
 print(result)
 
 
