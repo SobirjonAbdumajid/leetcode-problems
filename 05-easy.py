@@ -1,3 +1,22 @@
+# # 1
+# class Solution(object):
+#     def mergeAlternately(self, word1, word2):
+#         """
+#         :type word1: str
+#         :type word2: str
+#         :rtype: str
+#         """
+        
+#         word1 = [i for i in word1]
+#         word2 = [i for i in word2]
+        
+#         counter = 0
+#         for i in word1:
+#             word2.insert(counter, i)            
+#             counter += 2
+#         return ''.join(word2)
+        
+# 2  
 class Solution(object):
     def mergeAlternately(self, word1, word2):
         """
@@ -6,20 +25,18 @@ class Solution(object):
         :rtype: str
         """
         result = []
+        i, j = 0, 0
         
-        word1 = [i for i in word1]
-        word2 = [i for i in word2]
-
-        for value in word2:
-            result.append(value)
-            
-        counter = 0
-        for i in word1:
-            result.insert(counter, i)
-            counter += 2
-        result = ''.join(result)
-        return result
+        while i < len(word1) and j < len(word2):
+            result.append(word1[i])
+            result.append(word2[j])
+            i += 1
+            j += 1
         
+        result.extend(word1[i:])
+        result.extend(word2[j:])
+        
+        return ''.join(result)
 
 word1 = "ab"
 word2 = "pqr"
