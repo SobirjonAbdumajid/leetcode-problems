@@ -22,7 +22,6 @@ solution = Solution()
 result = solution.isSubsequence("", "lettt")
 print(result)
 
-
 # class Solution(object):
 #     def romanToInt(self, s):
 #         """
