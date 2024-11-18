@@ -1,26 +1,27 @@
-class Solution(object):
-    def isSubsequence(self, s, t):
-        """
-        :type s: str
-        :type t: str
-        :rtype: bool
-        """
-        result = ""
-        index_i = ""
-        index_t = ""
-        for i in s:
-            if i in t:
-                index_i += str(t.find(i))
-                index_t += str(i.find(t))
-                result += i
-        right_answer = "".join(sorted(index_i))
-        if result == s and right_answer == index_i:
-            return True
-        return False
+# # 1 - chala
+# class Solution(object):
+#     def isSubsequence(self, s, t):
+#         """
+#         :type s: str
+#         :type t: str
+#         :rtype: bool
+#         """
+#         result = ""
+#         index_i = ""
+#         index_t = ""
+#         for i in s:
+#             if i in t:
+#                 index_i += str(t.find(i))
+#                 index_t += str(i.find(t))
+#                 result += i
+#         right_answer = "".join(sorted(index_i))
+#         if result == s and right_answer == index_i:
+#             return True
+#         return False
         
-solution = Solution()
-result = solution.isSubsequence("", "lettt")
-print(result)
+# solution = Solution()
+# result = solution.isSubsequence("", "lettt")
+# print(result)
 
 # class Solution(object):
 #     def romanToInt(self, s):
@@ -29,15 +30,24 @@ print(result)
 #         :rtype: int
 #         """
         
+# 2
 
+class Solution(object):
+    def isSubsequence(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        pointer_s, pointer_t = 0, 0
+        
+        while pointer_s < len(s) and pointer_t < len(t):
+            if s[pointer_s] == t[pointer_t]:
+                pointer_s += 1
+            pointer_t += 1
+        
+        return pointer_s == len(s)
 
-# M = 1000
-# CM = 900
-# XC = 90
-# IV = 4
-# III = 3
-# L = 50
-# V = 5 
-# III = 3
-
-# print(III)
+solution = Solution()
+result = solution.isSubsequence("", "lettt")
+print(result)
