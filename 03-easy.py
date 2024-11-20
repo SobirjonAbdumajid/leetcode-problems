@@ -18,11 +18,9 @@
         
 class Solution(object):
     def isPalindrome(self, x):
-        # Manfiy yoki 0 bilan tugaydigan (0 dan katta) sonlar palindrom bo‘lolmaydi
         if x < 0 or (x % 10 == 0 and x != 0):
             return False
         
-        # Sonning teskarisini hosil qilish
         reversed_half = 0
         while x > reversed_half:
             reversed_half = reversed_half * 10 + x % 10
@@ -30,7 +28,6 @@ class Solution(object):
         print(reversed_half)
 
         
-        # Agar son teng bo'lsa yoki uzunligi toq bo'lsa o‘rtasi teng chiqadi
         return x == reversed_half or x == reversed_half // 10
 
 solution = Solution()
