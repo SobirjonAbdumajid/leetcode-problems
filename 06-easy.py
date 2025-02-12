@@ -23,13 +23,6 @@
 # result = solution.isSubsequence("", "lettt")
 # print(result)
 
-# class Solution(object):
-#     def romanToInt(self, s):
-#         """
-#         :type s: str
-#         :rtype: int
-#         """
-        
 # 2
 
 class Solution(object):
