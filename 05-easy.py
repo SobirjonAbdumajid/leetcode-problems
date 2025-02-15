@@ -15,15 +15,12 @@
 #             word2.insert(counter, i)            
 #             counter += 2
 #         return ''.join(word2)
-        
+
+
+
 # # 2
 # class Solution(object):
 #     def mergeAlternately(self, word1, word2):
-#         """
-#         :type word1: str
-#         :type word2: str
-#         :rtype: str
-#         """
 #         result = []
 #         i, j = 0, 0
 #
