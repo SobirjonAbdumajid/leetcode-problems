@@ -1,6 +1,5 @@
 # 1
 class Solution(object):
-
     def findClosestNumber(self, nums):
         evens = list(map(abs, nums))
 
@@ -21,7 +20,7 @@ class Solution(object):
 #         return min(nums, key=lambda x: (abs(x), -x))
 
 
-# # 3
+# 3
 # class Solution:
 #     def findClosestNumber(self, nums):
 #         min_value = nums[0]
@@ -31,7 +30,7 @@ class Solution(object):
 #         return min_value
 
 solution = Solution()
-result = solution.findClosestNumber([2, 1, 1, -5, 4, -1, 100000])
+result = solution.findClosestNumber([2, -1, 1, 1, -5, 4, -1, 100000])
 print(result)
 
 
