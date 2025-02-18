@@ -7,4 +7,4 @@ class Solution(object):
 
 
 s = Solution()
-print(s.containsDuplicate([1, 2, 3]))
+print(s.containsDuplicate([1, 1, 2, 3]))

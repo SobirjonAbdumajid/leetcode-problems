@@ -1,14 +1,14 @@
 # 1
 class Solution(object):
     def canConstruct(self, ransomNote, magazine):
-        ransomNote_ = list(ransomNote)
-        magazine_ = list(magazine)
+        ransomNoteList = list(ransomNote)
+        magazineList = list(magazine)
         counter = 0
-        for i in ransomNote_:
-            if i in magazine_:
-                magazine_.remove(i)
+        for i in ransomNoteList:
+            if i in magazineList:
+                magazineList.remove(i)
                 counter += 1
-        if counter == len(ransomNote_):
+        if counter == len(ransomNoteList):
             return True
         return False
 
