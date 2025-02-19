@@ -1,6 +1,5 @@
 import pytest
 from easy_10 import Solution
-print(1)
 
 
 @pytest.mark.parametrize("s, t, expected", [
