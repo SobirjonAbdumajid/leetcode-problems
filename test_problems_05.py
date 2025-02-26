@@ -13,10 +13,12 @@ def test_problems():
         [24, 25, 26, 27, 28, 29],
         [30, 31, 32, 33, 34]
     ]
+
     yield {
         "get_second_largest": get_second_largest_data,
         "even_index_chars": even_index_chars_data,
     }
+
     print("\nFinished test_problems")
 
 
