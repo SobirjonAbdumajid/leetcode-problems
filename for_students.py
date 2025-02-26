@@ -17,6 +17,8 @@ def even_index_chars(text):
     return ''.join(text[i] for i in range(0, len(text), 2))
 
 
+print(even_index_chars('hello'))
+
 def get_second_largest(numbers):
     if len(numbers) < 2:
         raise ValueError("List must have at least two elements")

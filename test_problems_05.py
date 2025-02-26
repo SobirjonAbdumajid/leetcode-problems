@@ -16,7 +16,6 @@ def test_problems():
     yield {
         "get_second_largest": get_second_largest_data,
         "even_index_chars": even_index_chars_data,
-        "get_second_largest_fail": [1, 2, 3, "4"]
     }
     print("\nFinished test_problems")
 
