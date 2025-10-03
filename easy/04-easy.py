@@ -1,12 +1,12 @@
-# # 1
-# class Solution(object):
-#     def findClosestNumber(self, nums):
-#         evens = list(map(abs, nums))
-#
-#         closest = min(evens)
-#         if closest in nums:
-#             return closest
-#         return closest * -1
+# 1
+class Solution(object):
+    def findClosestNumber(self, nums):
+        evens = list(map(abs, nums))
+
+        closest = min(evens)
+        if closest in nums:
+            return closest
+        return closest * -1
 
 
 # # 2
