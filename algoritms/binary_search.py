@@ -2,11 +2,6 @@ from typing import List
 
 
 def binary_search(arr: List[int], target: int) -> int:
-    """
-    Ikkilik qidiruv: tartiblangan ro'yxatda ishlaydi.
-    Return: topilsa indeksi, topilmasa -1.
-    Murakkablik: O(log n)
-    """
     left, right = 0, len(arr) - 1
     while left <= right:
         mid = (left + right) // 2
